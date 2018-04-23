@@ -1,5 +1,3 @@
-create schema if not exists TEST;
-use TEST;
 create table if not exists `stock` (
   `STOCK_ID`   int(10) unsigned not null auto_increment,
   `STOCK_CODE` varchar(10)      not null,
