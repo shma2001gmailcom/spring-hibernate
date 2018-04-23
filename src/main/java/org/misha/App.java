@@ -13,11 +13,9 @@ public class App {
         final StockObject
                 stockObject = (StockObject) new ClassPathXmlApplicationContext(CONFIG_LOCATION).getBean("stockBo");
         // insert
-        final Stock stock = new Stock();
         final String stockCode = RandomStringUtils.randomNumeric(5);
-        stock.setStockCode(stockCode);
         final String stockName = RandomStringUtils.randomAlphabetic(5);
-        stock.setStockName(stockName);
+        final Stock stock = new Stock(stockCode, stockName);
         stockObject.save(stock);
         // select
         Stock stock2 = stockObject.findByStockCode(stockCode);
@@ -25,7 +23,7 @@ public class App {
         // update
         stock2.setStockName("HAIO-1");
         stockObject.update(stock2);
-        // delete
+        //delete
         stockObject.delete(stock2);
         System.out.println("Done");
     }

@@ -4,7 +4,6 @@ import org.misha.stock.dao.StockDao;
 import org.misha.stock.model.Stock;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-
 public class StockDaoImpl extends HibernateDaoSupport implements StockDao {
 
     public void save(final Stock stock) {

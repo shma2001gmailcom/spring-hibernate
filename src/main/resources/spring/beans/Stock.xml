@@ -2,7 +2,6 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
-
     <!-- Stock business object -->
     <bean id="stockBo" class="org.misha.stock.bo.impl.StockBoImpl">
         <property name="stockDao" ref="stockDao"/>
@@ -12,6 +11,4 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
     <bean id="stockDao" class="org.misha.stock.dao.impl.StockDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-
-
 </beans>

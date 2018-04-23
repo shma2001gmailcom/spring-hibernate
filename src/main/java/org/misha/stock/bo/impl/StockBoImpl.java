@@ -6,7 +6,7 @@ import org.misha.stock.model.Stock;
 
 public class StockBoImpl implements StockObject {
 
-    StockDao stockDao;
+    private StockDao stockDao;
 
     public void setStockDao(StockDao stockDao) {
         this.stockDao = stockDao;
